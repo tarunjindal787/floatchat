@@ -1,4 +1,4 @@
-# FloatChat 🌊
+# FloatChat 
 
 > **AI-Powered Conversational Interface for ARGO Ocean Data Discovery and Visualization**
 
@@ -6,23 +6,23 @@ FloatChat is an end-to-end system that ingests ARGO oceanographic float data (Ne
 
 ---
 
-## ✨ Features
+##  Features
 
 | Feature | Description |
 |---------|-------------|
-| 🗣 **Natural Language Queries** | Ask questions like *"Show salinity profiles in the Arabian Sea in March 2023"* |
-| 🗺 **Geospatial Visualization** | Float trajectories, profile heatmaps, multi-float overlays (Plotly Mapbox) |
-| 📈 **Ocean Profile Plots** | CTD vertical profiles, T-S diagrams, Hovmöller depth-time sections |
-| 🧪 **BGC Dashboard** | Dissolved oxygen, chlorophyll-a, nitrate, pH, backscatter panels |
-| 🔍 **RAG + Text-to-SQL** | LLM translates natural language → SQL; vector search over profile summaries |
-| 🔌 **MCP Server** | 7 typed tools exposed via Model Context Protocol for LLM agents |
-| ⬇ **Data Export** | CSV, CF-compliant NetCDF, ASCII table downloads |
-| 🔒 **SQL Safety** | `sqlglot`-based parsing — only `SELECT` statements allowed |
-| 🐳 **Docker-ready** | One-command startup with Docker Compose |
+|  **Natural Language Queries** | Ask questions like *"Show salinity profiles in the Arabian Sea in March 2023"* |
+| **Geospatial Visualization** | Float trajectories, profile heatmaps, multi-float overlays (Plotly Mapbox) |
+|  **Ocean Profile Plots** | CTD vertical profiles, T-S diagrams, Hovmöller depth-time sections |
+|  **BGC Dashboard** | Dissolved oxygen, chlorophyll-a, nitrate, pH, backscatter panels |
+|  **RAG + Text-to-SQL** | LLM translates natural language → SQL; vector search over profile summaries |
+|  **MCP Server** | 7 typed tools exposed via Model Context Protocol for LLM agents |
+|  **Data Export** | CSV, CF-compliant NetCDF, ASCII table downloads |
+|  **SQL Safety** | `sqlglot`-based parsing — only `SELECT` statements allowed |
+|  **Docker-ready** | One-command startup with Docker Compose |
 
 ---
 
-## 🏗 Architecture
+##  Architecture
 
 ```
 ARGO NetCDF Files
@@ -57,7 +57,7 @@ ARGO NetCDF Files
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Option 1 — Docker Compose (Recommended)
 
@@ -120,7 +120,7 @@ streamlit run frontend/app.py
 
 ---
 
-## 🤖 LLM Configuration
+##  LLM Configuration
 
 Set `LLM_PROVIDER` in `.env` to switch between models:
 
@@ -149,7 +149,7 @@ OLLAMA_BASE_URL=http://localhost:11434
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 floatchat/
@@ -191,7 +191,7 @@ floatchat/
 
 ---
 
-## 💬 Example Queries
+##  Example Queries
 
 | Query | Intent |
 |-------|--------|
@@ -221,7 +221,7 @@ The MCP server exposes these tools for LLM agents:
 
 ---
 
-## 🧪 Running Tests
+##  Running Tests
 
 ```bash
 # Run all tests
@@ -236,7 +236,7 @@ pytest --cov=ingestion --cov=backend --cov-report=html
 
 ---
 
-## 📊 Database Schema
+##  Database Schema
 
 ```sql
 floats       → one row per physical Argo float
@@ -264,7 +264,7 @@ PostGIS spatial index on `profiles(latitude, longitude)` enables efficient neare
 
 ---
 
-## 🌐 Data Sources
+##  Data Sources
 
 - **Primary**: [Argo Global Data Assembly Centre (GDAC)](https://argo.ucsd.edu/data/)
 - **Mirror 1**: [Ifremer GDAC](https://data-argo.ifremer.fr/)
@@ -273,7 +273,7 @@ PostGIS spatial index on `profiles(latitude, longitude)` enables efficient neare
 
 ---
 
-## 🔧 Environment Variables Reference
+##  Environment Variables Reference
 
 | Variable | Default | Description |
 |----------|---------|-------------|
@@ -288,13 +288,13 @@ PostGIS spatial index on `profiles(latitude, longitude)` enables efficient neare
 
 ---
 
-## 📜 License
+##  License
 
 MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🙏 Acknowledgements
+##  Acknowledgements
 
 - [Argo Program](https://argo.ucsd.edu/) — global ocean observing system
 - [Ifremer](https://www.ifremer.fr/) — Argo GDAC host
