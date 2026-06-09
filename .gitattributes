@@ -1,0 +1,19 @@
+# Normalize line endings
+* text=auto
+
+# Force LF for shell scripts and Python
+*.py    text eol=lf
+*.sh    text eol=lf
+*.sql   text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+*.toml  text eol=lf
+*.ini   text eol=lf
+*.css   text eol=lf
+
+# Binary files — no conversion
+*.nc    binary
+*.parquet binary
+*.faiss   binary

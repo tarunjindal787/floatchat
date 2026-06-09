@@ -1,0 +1,12 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "floatchat"
+version = "0.1.0"
+description = "AI-Powered Conversational Interface for ARGO Ocean Data"
+requires-python = ">=3.11"
