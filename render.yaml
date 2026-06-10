@@ -1,0 +1,35 @@
+# Render deployment configuration
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: floatchat
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: LLM_PROVIDER
+        value: ollama
+      - key: CHROMA_IN_MEMORY
+        value: "true"
+      - key: PORT
+        value: "8501"
+    healthCheckPath: /_stcore/health
+    autoDeploy: true
+
+  - type: pserv
+    name: floatchat-db
+    runtime: docker
+    image: pgvector/pgvector:pg16
+    plan: free
+    envVars:
+      - key: POSTGRES_USER
+        value: floatchat
+      - key: POSTGRES_PASSWORD
+        generateValue: true
+      - key: POSTGRES_DB
+        value: argo_db
+    disk:
+      name: postgres-data
+      mountPath: /var/lib/postgresql/data
+      sizeGB: 1
