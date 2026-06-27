@@ -86,10 +86,10 @@ def route_query(user_input: str) -> RouterResult:
 
     # Score intents
     scores = {
-        QueryIntent.EXPORT:     len(_EXPORT_KEYWORDS.findall(text)),
-        QueryIntent.NEAREST:    len(_NEAREST_KEYWORDS.findall(text)),
-        QueryIntent.TRAJECTORY: len(_TRAJECTORY_KEYWORDS.findall(text)),
-        QueryIntent.RAG:        len(_RAG_KEYWORDS.findall(text)),
+        QueryIntent.EXPORT:     len(_EXPORT_KEYWORDS.findall(text)) * 3,
+        QueryIntent.NEAREST:    len(_NEAREST_KEYWORDS.findall(text)) * 3,
+        QueryIntent.TRAJECTORY: len(_TRAJECTORY_KEYWORDS.findall(text)) * 3,
+        QueryIntent.RAG:        len(_RAG_KEYWORDS.findall(text)) * 2,
         QueryIntent.SQL:        len(_SQL_KEYWORDS.findall(text)),
     }
 

@@ -38,8 +38,6 @@ def _make_mock_dataset(n_prof: int = 3, n_levels: int = 10):
         "PRES_QC": (["N_PROF", "N_LEVELS"], np.full((n_prof, n_levels), "1", dtype="U1")),
     }
     ds = xr.Dataset(data)
-    ds.dims["N_PROF"]   = n_prof
-    ds.dims["N_LEVELS"] = n_levels
     return ds
 
 
